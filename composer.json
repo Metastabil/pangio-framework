@@ -1,0 +1,16 @@
+{
+    "name": "julius/pangio-framework",
+    "description": "Pangio is a light weight framework for developing PHP web applications.",
+    "type": "framework",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Julius Derigs",
+            "email": "derigs@pangio.de"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+      "ext-pdo": "*"
+    }
+}
