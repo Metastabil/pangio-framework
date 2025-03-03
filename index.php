@@ -38,7 +38,7 @@ $routes = require __DIR__ . '/config/routes.php';
 $route  = false;
 
 foreach ($routes as $key => $value) {
-    $controller = 'KPO\\Controllers\\' . $value[0];
+    $controller = 'App\\Controllers\\' . $value[0];
     $method     = $value[1];
 
     $route = router($key, static function ($param = null) use ($controller, $method) {
