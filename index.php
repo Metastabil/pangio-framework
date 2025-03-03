@@ -40,6 +40,7 @@ $route  = false;
 foreach ($routes as $key => $value) {
     $controller = 'App\\Controllers\\' . $value[0];
     $method     = $value[1];
+    $key        = $key === 0 ? '' : $key;
 
     $route = router($key, static function ($param = null) use ($controller, $method) {
         $class = new $controller;
