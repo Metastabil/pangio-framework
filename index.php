@@ -50,6 +50,10 @@ foreach ($routes as $key => $value) {
             $class->$method();
         }
     });
+
+    if ($route) {
+        break;
+    }
 }
 
 if (!$route) {
