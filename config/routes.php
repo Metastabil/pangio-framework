@@ -1,5 +1,5 @@
 <?php
 
-$routes[] = ['Pages', 'welcome'];
+$routes[] = ['BaseController', 'welcome'];
 
 return $routes;
