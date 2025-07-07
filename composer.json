@@ -11,6 +11,11 @@
     ],
     "require": {
         "php": "^8.3",
-      "ext-pdo": "*"
+        "ext-pdo": "*",
+        "symfony/yaml": "^7.3"
+    }
+,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
     }
 }
