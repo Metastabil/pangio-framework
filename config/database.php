@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * @author Julius Derigs
+ * @version 1.0.0
+ */
+
 return [
     'host' => 'localhost',
     'user' => 'root',

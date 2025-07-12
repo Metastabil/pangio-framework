@@ -4,9 +4,20 @@ namespace System\Classes;
 use PDOException;
 use PDO;
 
+/**
+ * @author Julius Derigs
+ * @version 1.0.0
+ */
+
 class Database {
+    /**
+     * @var string
+     */
     private string $host, $user, $db, $pw, $port, $charset, $db_type;
 
+    /**
+     * Constructor
+     */
     public function __construct() {
         $config = require dirname(__DIR__, 2) . '/config/database.php';
 
@@ -19,6 +30,9 @@ class Database {
         $this->db_type = $config['db_type'];
     }
 
+    /**
+     * @return PDO
+     */
     public function connect() :PDO {
         try {
             if ($this->db_type === 'mysql') {

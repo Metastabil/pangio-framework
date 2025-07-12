@@ -1,6 +1,15 @@
 <?php
 
+/**
+ * @author Julius Derigs
+ * @version 1.0.0
+ */
+
+
 if (!function_exists('get_full_url')) {
+    /**
+     * @return string
+     */
     function get_full_url() :string {
         $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] === 443) ? "https://" : "http://";
         $host = $_SERVER['HTTP_HOST'];
@@ -11,6 +20,11 @@ if (!function_exists('get_full_url')) {
 }
 
 if (!function_exists('router')) {
+    /**
+     * @param string $route
+     * @param mixed $callback
+     * @return bool
+     */
     function router(string $route, mixed $callback) :bool {
         $full_url        = get_full_url();
         $url_parts       = explode('/', trim(str_replace(BASE_URL, '', $full_url), '/'));
